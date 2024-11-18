@@ -1,18 +1,24 @@
 function primeNo(arr){
     let primNumber = [];
     
-    if(arr[i]<2) isprime=false;
-    for(let i=3;i<arr.length;i++){
+    
+    for(let i=1;i<arr.length;i++){
+      
         let isprime = true;
+        if(arr[i]<2) isprime=false;
+        else{
         for(let j=2;j<arr[i];j++){
-            if(arr[i]%j===0) isprime=false;
+          if(arr[i]===2) primNumber.push(arr[i]);
+          else if(arr[i]%j===0) isprime=false;
         }
-        if(isprime===true) primeNumber.push(arr[i]);
+        }
+        if(isprime===true) primNumber.push(arr[i]);
     }
+    console.log(primNumber)
    let min = primNumber[0];
     let max = primNumber[0];
     let sum = 0;
-    for(let i=0;i<primeNumber.length;i++){
+    for(let i=0;i<primNumber.length;i++){
         if(primNumber[i]<min) min = primNumber[i];
         if(primNumber[i]>max) max = primNumber[i];
         sum += primNumber[i];
