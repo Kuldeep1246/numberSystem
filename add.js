@@ -4,8 +4,8 @@ function primeNo(arr){
     if(arr[i]<2) isprime=false;
     for(let i=3;i<arr.length;i++){
         let isprime = true;
-        for(let j=2;j<i;j++){
-            if(i%j===0) isprime=false;
+        for(let j=2;j<arr[i];j++){
+            if(arr[i]%j===0) isprime=false;
         }
         if(isprime===true) primeNumber.push(arr[i]);
     }
